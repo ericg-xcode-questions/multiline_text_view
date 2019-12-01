@@ -8,10 +8,14 @@
 
 import SwiftUI
 
-struct ContentView: View {
-    var body: some View {
-        Text("Hello, World!")
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+struct ContentView: View
+{
+    @State var someText = "some text"
+    
+    var body: some View
+    {
+        MultilineTextView( text: self.$someText )
+            .background( Color.white )
     }
 }
 
